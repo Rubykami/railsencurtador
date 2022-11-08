@@ -14,6 +14,10 @@ class Shortener < ApplicationRecord
         self.BaseUrl.gsub!("https://", "")
     end}
     
+    after_create {
+        
+    }
+
     validates_uniqueness_of :ShortenedUrl
     validates_presence_of :BaseUrl
 
