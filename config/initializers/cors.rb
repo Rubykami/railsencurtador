@@ -11,6 +11,7 @@
 
      resource "*",
        headers: :any,
-       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+       expose: %w[access-token expiry token-type uid client],
+       methods: [:get, :post, :put, :patch, :delete]
    end
  end

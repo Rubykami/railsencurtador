@@ -18,8 +18,13 @@ class Api::V1::ShortenerController < ApplicationController
     end
 
     def show 
-        @link = Shortener.find_by(Code: params[:Code])
+        @link = Shortener.find(params[:Code])
+        if params[:Code] === 'login'
+            redirect_to 'http://localhost:3000/login'
+        else
             redirect_to "https://" + @link.BaseUrl, allow_other_host: true
+        end
+
     end 
 
     def destroy 
