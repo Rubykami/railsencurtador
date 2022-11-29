@@ -9,8 +9,10 @@ Rails.application.routes.draw do
     mount_devise_token_auth_for 'User', at: 'auth'
     namespace :v1 do 
       resources :shortener 
+      resources :user
     end
   end
 
   get "/:Code", to: "api/v1/shortener#show"
+  post "/api/auth", to: "api/v1/user#create"
 end
