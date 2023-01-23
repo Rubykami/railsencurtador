@@ -9,6 +9,8 @@ Ele irá pegar qualquer tipo de link que você possuir e irá transformá-lo em 
 ---
 </hr>
 
+## Como utilizá-lo?
+
 </hr>
 
 1. Primeiramente, você deve criar o banco de dados utilizando o terminal através do comando rails db:create e logo após isso migrar o banco de dados para a sua aplicação utilizando o comando rails db:migrate.
